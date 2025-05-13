@@ -55,7 +55,7 @@ const EmailSection = () => {
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
           
-           I'm always open to meaningful conversations — whether it's about data science, sustainability, or potential opportunities. Feel free to reach out!
+           I&apos;m always open to meaningful conversations — whether it&apos;s about data science, sustainability, or potential opportunities. Feel free to reach out!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="github.com">

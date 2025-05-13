@@ -72,10 +72,10 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I'm a detail-oriented Data Science student with strong experience in Python
+            I&apos;m a detail-oriented Data Science student with strong experience in Python
             , machine learning, and sustainability-related large dataset projects. 
             Passionate about organizing information, solving problems, and delivering practical solutions. 
-            I also enjoy exploring new knowledge to broaden my horizons—I'm naturally curious and always eager to learn new things.
+            I also enjoy exploring new knowledge to broaden my horizons—I&apos;m naturally curious and always eager to learn new things.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
