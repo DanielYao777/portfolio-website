@@ -33,9 +33,12 @@ const EmailSection = () => {
     const response = await fetch(endpoint, options);
     const resData = await response.json();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+    if (response.ok) {
+    const resData = await response.json();
+    console.log("Message sent.");
+    setEmailSubmitted(true);
+    } else {
+    alert("There was a problem sending your message. Please try again.");
     }
   };
 
@@ -51,15 +54,14 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          
+           I'm always open to meaningful conversations — whether it's about data science, sustainability, or potential opportunities. Feel free to reach out!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="github.com">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/daniel-yao182124/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -69,6 +71,7 @@ const EmailSection = () => {
           <p className="text-green-500 text-sm mt-2">
             Email sent successfully!
           </p>
+          
         ) : (
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
@@ -100,7 +103,7 @@ const EmailSection = () => {
                 id="subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
+                placeholder="Let's connect!"
               />
             </div>
             <div className="mb-6">
