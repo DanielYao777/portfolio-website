@@ -19,7 +19,7 @@ const projectsData = [
     title: "Container Loading Application",
     description: "It's a software to minimize the time taken for Unloading/loading cargo ships and Balancing cargo ships. I developed an software that calculates the best route that takes the minimum steps to finish the work.",
     image: "/images/projects/produce.gif",
-    tag: ["All", "Web"],
+    tag: ["All", "Application"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -28,7 +28,7 @@ const projectsData = [
     title: "E-commerce Database System",
     description: "I created a database system with customer accounts, merches info, check out system. You can create new accounts, you can sign in with your account, you can see your past orders, you can even buy new merches on different stores!",
     image: "/images/projects/database.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Application", "Data Analysis"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -37,7 +37,7 @@ const projectsData = [
     title: "Sustainability-related large dataset model",
     description: "Automating Course Collection, Course Classification, and University STAR Reporting for Sustainable Development Goals Using Information Retrieval",
     image: "/images/projects/sustainability.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Data Analysis"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -55,7 +55,7 @@ const projectsData = [
     title: "Exploratory Data Analysis and Regression Models for Medical Insurance Dataset",
     description: "Applied various statistical techniques to identify key factors influencing insurance costs, and developed predictive models to evaluate the impact of each variable and forecast cost changes.",
     image: "/images/projects/stat.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Data Analysis"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -97,8 +97,13 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Data Analysis"
+          isSelected={tag === "Data Analysis"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Application"
+          isSelected={tag === "Application"}
         />
       </div>
       <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
