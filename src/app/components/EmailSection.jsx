@@ -31,14 +31,14 @@ const EmailSection = () => {
     };
 
     const response = await fetch(endpoint, options);
-    const resData = await response.json();
 
     if (response.ok) {
-    const resData = await response.json();
-    console.log("Message sent.");
-    setEmailSubmitted(true);
+      console.log("Message sent.");
+      setEmailSubmitted(true);
     } else {
-    alert("There was a problem sending your message. Please try again.");
+      const errorData = await response.json(); // 只在錯誤時讀
+      console.error("Failed to send email:", errorData);
+      alert("There was a problem sending your message.");
     }
   };
 
@@ -58,7 +58,7 @@ const EmailSection = () => {
            I&apos;m always open to meaningful conversations — whether it&apos;s about data science, sustainability, or potential opportunities. Feel free to reach out!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/DanielYao777">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
           <Link href="https://www.linkedin.com/in/daniel-yao182124/">
